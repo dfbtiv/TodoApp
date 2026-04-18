@@ -53,18 +53,5 @@ public class Main {
             }
         }
         input.close(); /* matikan scanner agar hemat memori */
-
-        // manager.addTask("Belajar Java");
-        // manager.addTask("Daftar Magang");
-
-        // manager.viewTasks();
-
-        // System.out.println("\n------------------");
-
-        // manager.markTaskAsDone(1);
-
-        // System.out.println("------------------");
-
-        // manager.viewTasks();
     }
 }

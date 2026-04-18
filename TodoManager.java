@@ -30,6 +30,8 @@ public class TodoManager {
         if (index >= 0 && index < taskList.size()) {
             taskList.get(index).setDone(true);
             System.out.println("Tugas Selesai!");
+        } else {
+            System.out.println("\n Gagal: Nomor tugas tidak ditemukan.");
         }
     }
 
