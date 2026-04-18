@@ -15,7 +15,7 @@ public class TodoManager {
 
     public void viewTasks() {
         if (taskList.isEmpty()) {
-            System.out.println("Tidak ada tugas saat ini.");
+            System.out.println("\nTidak ada tugas saat ini.");
             return;
         }
 
@@ -23,7 +23,7 @@ public class TodoManager {
         for (int i = 0; i < taskList.size(); i++) {
             System.out.println((i + 1) + " . " + taskList.get(i).toString());
         }
-        // System.out.println("-----------------------");
+
     }
 
     public void markTaskAsDone(int index) {
@@ -31,5 +31,9 @@ public class TodoManager {
             taskList.get(index).setDone(true);
             System.out.println("Tugas Selesai!");
         }
+    }
+
+    public boolean isEmpty() {
+        return taskList.isEmpty();
     }
 }

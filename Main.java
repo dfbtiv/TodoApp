@@ -15,7 +15,7 @@ public class Main {
             System.out.println("2. Lihat Semua Task");
             System.out.println("3. Selesaikan Tugas");
             System.out.println("4. Exit");
-            System.out.print("Pilih Menu (1-4: ");
+            System.out.print("Pilih Menu (1-4): ");
 
             int pilihan = input.nextInt();
             input.nextLine(); /* utk membersihkan enter */
@@ -31,10 +31,16 @@ public class Main {
             }
 
             else if (pilihan == 3) {
-                manager.viewTasks();
-                System.out.print("Masukan nomor tugas yang sudah selesai: ");
-                int nomor = input.nextInt();
-                manager.markTaskAsDone(nomor - 1);
+                // cek apakah kosong atau ada task
+                if (manager.isEmpty()) {
+                    System.out.println("\nBelum ada tugas yang dapat diselesaikan. Add Task dulu ya!");
+                } else {
+                    // kalau ada list tasknya, tampilkan dan tanya
+                    manager.viewTasks();
+                    System.out.print("\nMasukan nomor tugas yang sudah selesai: ");
+                    int nomor = input.nextInt();
+                    manager.markTaskAsDone(nomor - 1);
+                }
             }
 
             else if (pilihan == 4) {

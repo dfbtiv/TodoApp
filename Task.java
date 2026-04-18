@@ -22,7 +22,7 @@ public class Task {
 
     @Override
     public String toString() {
-        String status = isDone ? "[✔]" : "[ ]";
+        String status = isDone ? "[x]" : "[ ]";
         return status + " " + title;
     }
 }
