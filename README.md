@@ -31,8 +31,9 @@ A simple, interactive To-Do List application built with Java. This project was d
    ```bash
    git clone [https://github.com/dfbtiv/TodoApp.git](https://github.com/dfbtiv/TodoApp.git)
 3. Navigate to the project folder and compile the files:
- ```bash
- javac *.java
+```bash
+   javac *.java
+```
 4. Run the application
  ```bash
  java Main
