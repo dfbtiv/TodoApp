@@ -8,7 +8,7 @@ public class Task {
         this.isDone = false;
     }
 
-    public String geSTitle() {
+    public String getTitle() {
         return title;
     }
 
