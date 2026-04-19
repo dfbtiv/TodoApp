@@ -6,24 +6,27 @@ A simple, interactive To-Do List application built with Java. This project was d
 - **Add Tasks:** Dynamically insert new tasks or to-do items.
 - **View Tasks:** Display a formatted list of all tasks with their current status.
 - **Complete Tasks:** Interactively mark tasks as done (changing from `[ ]` to `[x]`).
-- **Input Validation:** Prevents the app from crashing when choosing empty lists or invalid task numbers.
+- **Delete Tasks:** Remove specific tasks from the list by their index.
+- **Robust Input Validation:** Uses `try-catch` blocks to prevent the app from crashing when users enter invalid inputs (e.g., entering letters instead of numbers).
 
 ## 🚀 Concepts & Technologies Used
 - **Language:** Java
 - **Core Concepts:** Object-Oriented Programming (Classes, Encapsulation, Constructors, and Methods).
+- **Exception Handling:** Implemented `try-catch` to handle `InputMismatchException`.
 - **Data Structures:** `ArrayList` for dynamic data storage.
 - **User Interaction:** `Scanner` class for real-time console input.
 - **Logic Flow:** Implementation of `while` loops, `for` loops, and complex `if-else` branching.
 
 ## 📂 Project Structure
-- `Main.java`: The entry point and user interface logic.
-- `TodoManager.java`: The "controller" that manages the task list logic.
-- `Task.java`: The "blueprint" or data model for individual task objects.
+- `Main.java`: The entry point, user interface logic, and input validation.
+- `TodoManager.java`: The "controller" that manages the logic for adding, viewing, and deleting tasks.
+- `Task.java`: The data model for individual task objects.
 
 ## 🛠 Future Roadmap
-- [ ] **Delete Feature:** Ability to remove specific tasks from the list.
+- [x] **Delete Feature:** (Completed) Ability to remove specific tasks.
+- [ ] **Data Persistence:** Saving tasks to a file (.txt or .json) or database so they don't disappear when the app closes.
 - [ ] **GUI Version:** Migrating from CLI to a Graphical User Interface (Java Swing/JavaFX).
-- [ ] **Data Persistence:** Saving tasks to a file or database so they don't disappear when the app closes.
+- [ ] **REST API Integration:** Transitioning this logic into a Spring Boot backend.
 
 ## 💻 How to Run
 1. Ensure you have the **Java Development Kit (JDK)** installed.
