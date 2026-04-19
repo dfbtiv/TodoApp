@@ -14,11 +14,20 @@ public class Main {
             System.out.println("1. Tambah Task Baru");
             System.out.println("2. Lihat Semua Task");
             System.out.println("3. Selesaikan Tugas");
-            System.out.println("4. Exit");
-            System.out.print("Pilih Menu (1-4): ");
+            System.out.println("4. Hapus Tugas");
+            System.out.println("5. Exit");
 
-            int pilihan = input.nextInt();
-            input.nextLine(); /* utk membersihkan enter */
+            int pilihan = 0;
+            System.out.print("Pilih Menu (1-5): ");
+
+            try {
+                pilihan = input.nextInt();
+                input.nextLine();
+            } catch (Exception e) {
+                System.out.println("Masukan angka antara 1-5, bukan huruf atau simnbol.");
+                input.nextLine();
+                continue;
+            }
 
             if (pilihan == 1) {
                 System.out.println("Ketik tugas yang mau ditambahkan: ");
@@ -44,6 +53,17 @@ public class Main {
             }
 
             else if (pilihan == 4) {
+                if (manager.isEmpty()) {
+                    System.out.println("\n Belum ada tugas yang bisa dihapus.");
+                } else {
+                    manager.viewTasks();
+                    System.out.print("\n Masukan nomor tugas yang ingin dihapus: ");
+                    int nomor = input.nextInt();
+                    manager.deleteTasks(nomor - 1);
+                }
+            }
+
+            else if (pilihan == 5) {
                 System.out.println("Terimakasih sudah menggunakan aplikasi ini. See You!");
                 isRunning = false; /* matikan loop */
             }

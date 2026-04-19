@@ -31,11 +31,21 @@ public class TodoManager {
             taskList.get(index).setDone(true);
             System.out.println("Tugas Selesai!");
         } else {
-            System.out.println("\n Gagal: Nomor tugas tidak ditemukan.");
+            System.out.println("\n Gagal: Tugas tidak ditemukan.");
         }
     }
 
     public boolean isEmpty() {
         return taskList.isEmpty();
+    }
+
+    public void deleteTasks(int index) {
+        if (index >= 0 && index < taskList.size()) {
+            String removedTask = taskList.get(index).getTitle();
+            taskList.remove(index);
+            System.out.println("Tugas '" + removedTask + "' berhasil dihapus.");
+        } else {
+            System.out.println("Gagal: Nomor tugas tidak ditemukan.");
+        }
     }
 }
